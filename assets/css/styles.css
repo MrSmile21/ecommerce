@@ -1,0 +1,188 @@
+/*-----------------google Fonts-----------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+:root {
+    --header-height: 3.5rem;
+
+    /*----------- Colors -----------*/
+    --title-color: hsl(250, 8%, 15%);
+    --text-color: hsl(250, 8%, 35%);
+    --body-color: hsl(250, 60%, 98%);
+    --container-color: #fff;
+    --shadow: hsla(0, 0%, 15%, .1);
+    --scroll-bar-color: hsl(250, 12%, 90%);
+    --scroll-thumb-color: hsl(250, 12%, 80%);
+
+    /*-------- Font and typography ---------*/
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+
+    /*--------- Font weight ------------*/
+    --font-medium: 500;
+    --font-bold: 600;
+
+    /*----------- Margenes Bottom --------*/
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*-------- z index --------*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: #fff;
+}
+
+.Container {
+    max-width: 650px;
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.2);
+    box-shadow: 0 15px 20px rgba(0,0,0,0.6);
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: left;
+    color: #504e4e;
+    padding-bottom: 8px;
+    border-bottom: 1px solid silver;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.input-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+
+.input-box:nth-child(2n) {
+    justify-content: end;
+}
+
+.input-box label, .gender-title {
+    width: 95%;
+    color: #6b6b6b;
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.gender-title {
+    font-size: 16px;
+}
+
+.input-box input {
+    height: 40px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.input-box input:is(:focus,:valid) {
+    box-shadow: 0 3px 6px rgba(5, 5, 5, 0.671);
+}
+
+.gender-category label {
+    padding: 0 20px 0 5px;
+    font-size: 14px;
+}
+
+.gender-category {
+    color: rgb(87, 86, 86);
+}
+
+.gender-category label, .gender-category input {
+    cursor: pointer;
+}
+
+.alert p {
+    font-size: 14px;
+    font-style: italic;
+    color: #696969;
+    margin: 5px 0;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+.alert a {
+    font-weight: 500;
+    text-decoration: none;
+    color: rgb(8, 48, 44);
+}
+
+.alert a:hover {
+    font-weight: 500;
+    text-decoration: underline;
+    color: #e0424a;
+}
+
+.button-container button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #061229;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #8c9394,#e6e5d6);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.button-container button:hover {
+    background-image: linear-gradient(to right,#e6e5d6, #8c9394);
+}
+
+@media(max-width:600px) {
+    .Container {
+        min-width: 280px;
+    }
+    .content {
+        max-height: 380px;
+        overflow: auto;
+    }
+    .input-box {
+        margin-bottom: 12px;
+        width: 100%;
+    }
+    .input-box:nth-child(2n) {
+        justify-content: space-between;
+    }
+    .gender-category {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+    }
+    .content::-webkit-scrollbar {
+        width: 0;
+    }
+}
